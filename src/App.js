@@ -6,7 +6,8 @@ import ProtectedRoutes from "./Components/ProtectedRoutes";
 import { AboutPage, HomePage, SignInPage, PostPage, PostsPage, NotFoundPage } from './Pages/index';
 
 function App() {
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : '';
+
     return (
         <div>
             <Routes>

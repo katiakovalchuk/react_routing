@@ -11,7 +11,7 @@ const Layout = ({user}) => {
                         <li className='list-item'><NavLink to='/about' className='list-text'>About</NavLink></li>
                         <li className='list-item'><NavLink to='/posts/page1' className='list-text'>Posts</NavLink></li>
                         {
-                            (user && JSON.parse(user).loggedIn) ? (
+                            (user && user.loggedIn) ? (
                                 <li className='list-item'><NavLink to='/login' className='list-text disabled'>Logged
                                     In</NavLink></li>
                             ) : (

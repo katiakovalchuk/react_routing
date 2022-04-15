@@ -2,7 +2,7 @@ import {Navigate} from 'react-router-dom';
 
 const SignInPage = ({user}) => {
     return (
-        (user && JSON.parse(user).loggedIn) ? (
+        (user && user.loggedIn) ? (
             <Navigate to='/'/>
         ) : (
             <div className="form">
